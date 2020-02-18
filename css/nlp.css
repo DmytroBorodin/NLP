@@ -39,6 +39,13 @@
 	margin: 0;
 	line-height: 1;
 }
+body{
+	background-image: url('../img/header-bg.png');
+	background-size: 100% 113%;
+	background-repeat: no-repeat;
+	background-position: 0 0.1vh;
+	background-attachment: fixed;
+}
 a{
 	text-decoration: none;
 }
@@ -62,12 +69,10 @@ button:hover, a:hover{
 /* Scpecification */
 /* Header */
 .header{
-	padding-top: 65px;
+	position: relative;
+	padding-top: 100px;
 	height: 150vh;
-	background-image: url('../img/header-bg.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	background: transparent;
 }
 .menu-container{
 	justify-content: space-between;
@@ -104,10 +109,15 @@ button:hover, a:hover{
 /* Header */
 /* Text-section */
 .text-section{
-	background-color: #8ab6f2;
+	position: absolute;
+	top: calc(150vh + 100px);
+	transform: translateY(-100%);
+	width: 100%;
+	background-color: rgba(138, 182, 242, 0.75);
 	color: #fff;
 	font-size: 35px;
 	padding: 100px 0;
+	line-height: 1.2;
 }
 .text-container{
 	display: block;
@@ -129,7 +139,7 @@ button:hover, a:hover{
 /* Floor-section */
 .floor-section{
 	padding: 120px 0;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 .floor-img{
 	width: 69.27%;
@@ -190,7 +200,7 @@ button:hover, a:hover{
 .features{
 	width: 100%;
 	padding: 130px 0;
-	background-color: #fe6600;
+	background-color: rgba(254, 102, 0, 0.7);
 	display: flex;
 	align-items: center;
 	
@@ -224,6 +234,7 @@ button:hover, a:hover{
 .cards-container{
 	width: 75.48%;
 	justify-content: space-between;
+	padding: 40px 0;
 }
 .features-card{
 	width: 29.9%;
@@ -238,11 +249,14 @@ button:hover, a:hover{
 	transform: scale(1.1);
 }
 .cad-title{
-	margin-bottom: 60px;
+	margin:20px 0 40px;
+}
+.slick-list, .draggable{
+	padding: 0;
 }
 .card-img{
 	display: block;
-	width: 100%;
+	width: 95%;
 	border-radius: 12px;
 }
 .features-logo{
@@ -258,7 +272,7 @@ button:hover, a:hover{
 /* Donate */
 .donate{
 	padding: 100px 0;
-	background-image: url('../img/collage-bg.png');
+	background-color: rgba(255, 255, 255, 0.7);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -266,9 +280,13 @@ button:hover, a:hover{
 .donate-wrap{
 	margin-left: 8.85%;
 	display: flex;
+	align-items: flex-start;
 }
 .donate-img{
 	width: 9.16%;
+}
+.donate-hr-img{
+	display: none;
 }
 .text-wrap{
 	width: 69.55%;
@@ -311,6 +329,9 @@ button:hover, a:hover{
 	padding-left: 45px;
 	padding-right: 45px;
 	width: auto;
+}
+.sm{
+	display: none;
 }
 .bill-container{
 	width: 100%;
@@ -379,8 +400,9 @@ button:hover, a:hover{
 	color: transparent;
 }
 .pay-block{
-	margin-left: 8.44%;
-	width: 71%;
+	margin: auto;
+	width: 100%;
+	padding-top: 70px;
 }
 .p-method{
 	text-align: center;
@@ -408,10 +430,15 @@ button:hover, a:hover{
 }
 .idea-img{
 	width: 8.35%;
+	align-self: center;
+}
+.idea-img-hr{
+	display: none;
 }
 .contact-wrap{
 	margin-left: 5.94%;
 	display: flex;
+	align-items: flex-start;
 }
 .contact-block{
 	box-sizing: border-box;
@@ -468,7 +495,9 @@ button:hover, a:hover{
 	margin-right: 3.9%;
 }
 .send-btn{
-	padding: 22px 34px;
+	width: 26.5%;
+	padding: 22px 0;
+	text-align: center;
 	color: #fff;
 	background-color: #2e2b70;
 	font-family: 'Arial';
@@ -511,7 +540,7 @@ button:hover, a:hover{
 .about{
 	padding: 100px 0;
 	display: flex;
-	background-color: #FFEF3D;
+	background-color: #FFEF51;
 }
 .about-wrap{
 	display: flex;
@@ -576,12 +605,24 @@ button:hover, a:hover{
 .asu-img{
 	float: right;
 }
-.contact-img{
-	padding-top: 17px;
-	border: 5px solid #2e2b70;
+.about-img{
+	padding-bottom: 1%;
 	margin-bottom: 25px;
-	width: 100%;
+	background-image: url("../img/man.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
+.about-border{
+	padding-top: 100%;
+	width: 93%;
+	border: 5px solid #2e2b70;
+}
+/*.contact-img{
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	width: 100%;
+}*/
 .about-contact-wrap{
 	width: 24%;
 }
@@ -604,26 +645,32 @@ button:hover, a:hover{
 /* Footer */
 .footer{
 	background-image: url(../img/footer-bg.png);
-	background-size: cover;
+	background-size: cover!important;
 	background-repeat: no-repeat;
 	background-position: center;
 	padding: 100px 0;
 }
 .footer-container{
-	justify-content: space-between;
+	justify-content: flex-end;
 	color: #fff;
 	font-family: 'Montserrat Medium';
 	font-size: 18px;
 	width: 60.94%;
 }
-.navigation{
-	margin-left: 29.6%;
+.navigation, .contact-us, .connected{
+	margin-left: 8.55%;
 }
 .footer-container h3{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	font-family: 'Montserrat SemiBold';
 	font-size: 22px;
 	color: #fff;
 	margin-bottom: 22px;
+}
+.footer-container h3 img{
+	display: none;
 }
 .footer-container p{
 	line-height: 36px;
@@ -631,6 +678,9 @@ button:hover, a:hover{
 .footer-container a{
 	line-height: 36px;
 	color: #fff;
+}
+.contact-title{
+	margin-left: 7.3%;
 }
 .adress-block{
 	display: flex;
@@ -672,11 +722,12 @@ button:hover, a:hover{
 	.features-title{
 		font-size: 44px;
 	}
-		.navigation{
-		margin-left: 0;
-	}
 	.footer-container{
 		justify-content: space-between;
+	}
+	.text-section{
+		font-size: 28px;
+		padding: 50px 0;
 	}
 }
 @media screen and (max-width: 1200px){
@@ -684,7 +735,7 @@ button:hover, a:hover{
 		max-width: 960px;
 	}
 	.logo{
-		width: 390px;
+		width: 370px;
 	}
 	.floor-img img{
 		width: 900px;
@@ -694,6 +745,9 @@ button:hover, a:hover{
 	}
 	.fr-input, .massege, .email{
 		width: 100%;	
+	}
+	.features{
+		padding: 70px 0;
 	}
 	.features-block{
 		height: 320px;
@@ -724,7 +778,7 @@ button:hover, a:hover{
 		font-size: 28px;
 	}
 	.send-btn{
-		font-size: 28px;
+		font-size: 24px;
 		padding: 16px 26px;
 	}
 	.mail-to{
@@ -768,10 +822,445 @@ button:hover, a:hover{
 	}
 }
 @media screen and (max-width: 992px){
+	body{
+		background-size: 100% 110%;
+		background-position: center top;
+	}
+	.container{
+		max-width: 700px;
+	}
+	.logo {
+    	width: 290px;
+	}
+	.burger {
+   		border: 2px solid #fa7f43;
+    	height: 30px;
+   		width: 52px;
+   		padding: 6px 3px;
+	}
+	.humburger, .humburger::before, .humburger::after{
+		width: 48px;
+		height: 4px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+	}
+	.humburger::before{
+		transform: translate(-50%, -20%);
+		top: 11px;
+	}
+	.humburger::after{
+		transform: translate(-50%, 20%);
+		bottom: 11px;
+	}
 	.floor-img img{
 		width: 700px;
 	}
 	.arrow{
 		font-size: 60px;
 	}
+	.features-block{
+		height: 280px;
+		margin-top: 80px;
+		border: 10px solid #ffcaa6;
+	}
+	.features-title{
+		font-size: 26px;
+		margin-top: 200px;
+	}
+	.text-block {
+    	font-size: 18px;
+	}
+	.donate-btn {
+    	padding: 14.5px 0;
+    	font-size: 13px;
+	}
+	.title {
+    	font-size: 40px;
+	}
+	.contact input, .contact textarea{
+		font-size: 22px;
+	}
+	.send-btn{
+		font-size: 18px;
+		padding: 12px 22px;
+	}
+	.mail-to{
+		font-size: 30px;
+		padding: 14px 30px;
+	}
+	.adrs{
+		font-size: 22px;
+	}
+	.about-title-one{
+		font-size: 38px;
+		margin-top: 315px;
+	}
+	.about-title-two{
+		font-size: 22px;
+	}
+	.wrap-one p {
+   	    margin-top: 93px;
+	}
+	.wrap-one {
+		margin-left: 0px;
+	}
+	.about-text-wrap p{
+		font-size: 14px;
+		line-height: 24px;
+	}
+		.about-text {
+    	margin-bottom: 24px;
+	}
+	.about-contact-btn{
+		padding: 12px 26px;
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 768px){
+	body{
+		background-size: 100% 100%;
+		background-position: center top;
+	}
+	.header{
+		position: relative;
+		padding-top: 100px;
+		height: 120vh;
+		background: transparent;
+	}
+	.container {
+    	max-width: 80%;
+	}
+	.logo {
+    	width: 40%;
+	}
+	.text-section{
+		font-size: 18px;
+		top: calc(120vh + 100px);
+	}
+	.floor-img img{
+		width: 90%;
+	}
+	.arrow{
+		font-size: 0px;
+	}
+	.slick-dots{
+		display: flex;
+		justify-content: center;
+	}
+	.slick-dots li{
+		margin: 0 5.536%;
+	}
+	.features-wrap{
+		display: block;
+	}
+	.features-block{
+		margin-top: 0;
+		width: 25%;
+		height: auto;
+		box-sizing: border-box;
+		text-align: center;
+		margin-bottom: 25px;
+		margin-left: 7.86%;
+	}
+	.features-title{
+		transform:rotate(0);
+		margin-top:0;
+		line-height: 30px;
+		margin-left: 0;
+	}
+	.features{
+		padding: 50px 0;
+	}
+	.features-wrap {
+    	width: 100%;
+    	margin-left: 0;
+	}
+	.features-container{
+		justify-content: center;
+		margin: 0;
+	}
+	.cards-container{
+		margin:0;
+		width: 70%;
+	}
+	.features-logo{
+		display: none;
+	}
+	.card-img{
+		width: 100%;
+	}
+	.features-container{
+		
+	}
+	.features-card{
+		padding: 30px 50px;
+	}
+	.cards-container{
+		padding: 0;
+	}
+	.cad-title{
+		margin-bottom:30px;
+	}
+	.floor-section{
+		padding: 50px 0;
+	}
+	.slick-dots {
+    transform: translateY(35%);
+	}
+	.slick-dots li button{
+		width: 52px;
+		height: 52px;
+	}
+	.features-block{
+		width: 35%;
+	}  
+	.features-dots{
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 90%);
+		display: flex;
+		justify-content: center;
+	}
+	.features-dots li button{
+		width: 52px;
+		height: 52px;
+		border: none;
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, 0.7);
+		font-size: 0;
+	}
+	.features-dots li{
+		margin: 10%;
+	}
+	.features-dots .slick-active{
+		background-color: #fff;
+		border-radius: 50%;
+	}
+	.donate-wrap{
+		flex-direction: column;
+		margin: auto;
+		width: 90%;
+	}
+	.donate-hr-img{
+		display: block;
+		width: 60%;
+	}
+	.donate-img{
+		display: none;
+	}
+	.text-wrap{
+		width: 100%;
+	}
+	.text-block{
+		font-size: 24px;
+	}
+	.form-wrap{
+		width: 70%;
+		margin: auto;
+	}
+	.btn-container{
+		flex-wrap: wrap;
+		margin-top: 30px;
+	}
+	.donate-btn {
+		width: 32%;
+    	padding: 48px 0;
+    	font-size: 34px;
+    	margin-bottom: 10px;
+	}
+	.sm{
+		display: block;
+	}
+	.lg{
+		display: none;
+	}
+	.contact-wrap{
+		flex-direction: column;
+		margin: 0;
+		width: 100%;
+	}
+	.contact-block{
+		width: 80%;
+		margin: 30px auto 0;
+		padding: 10px 30px;
+	}
+	.idea-img{
+		display: none;
+	}
+	.idea-img-hr{
+		display: block;
+		width: 48.8%;
+		margin-left: 11.72%;
+	}
+	.about {
+		flex-wrap: wrap;
+		padding: 50px 40px;
+		justify-content: space-between;
+	}
+	.about-wrap{
+		order: 1;
+		margin-left: 0;
+
+	}
+	.about-text-wrap{
+		width: 100%;
+		order: 3;
+		margin-left: 17.6%;
+		margin-top: 25px;
+		
+	}
+	.about-text-wrap p{
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.about-contact-wrap{
+		width: 47.6%;
+		order: 2
+	}
+	.footer{
+		padding: 50px 0;
+	}
+	.footer-container{
+		flex-wrap: wrap;
+		width: 80%;
+	}
+	.navigation, .contact-us, .connected{
+		width: 100%;
+		margin-left: 0%;	
+	}
+	.footer-container h3{
+		font-size: 28px;
+		border-bottom: 4px solid #fff;
+		margin-bottom: 12px;
+		padding-bottom: 12px;
+	}
+	.contact-title{
+		margin-left: 0;
+	}
+	.nav-list, .adress-block{
+		display: none;
+		font-size: 23.5px;
+		margin-bottom: 20px;
+	}
+	.send-btn {
+    	font-size: 16px;
+    	padding: 12px 0;
+	}
+	footer h3{
+		position: relative;
+	}
+	  footer h3::before {
+        content: "+";
+        position: absolute;
+        right: 0;
+        color: #fff;
+        font-size: 28px;
+        border: 2px solid #fff;
+        border-radius: 100px;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        bottom: 5px;
+    }
+     footer h3.active::before{
+     	 content: "-";
+     	 line-height: 30px;
+     }
+     .footer-container p {
+    line-height: 40px;
+}
+.footer-container a {
+    line-height: 40px;
+}
+}
+@media screen and (max-width: 574px){
+	body{
+		background-size: 100% 80%;
+		background-position: center top;
+	}
+	.container{
+		max-width: 100%;
+	}
+	.logo{
+		width: 45%;
+	}
+	.text-section{
+		font-size: 14px;
+	}
+	.main-text{
+		line-height: 28px;
+	}
+	.slick-dots li button{
+		width: 30px;
+		height: 30px;
+	}
+	.features-dots li button{
+		width: 30px;
+		height: 30px;
+	}
+	.features-block{
+		border: 5px solid #ffcaa6;
+	}  
+	.features-title{
+		font-size: 18px;
+	}
+	.text-block {
+    	font-size: 18px;
+	}
+	.donate-btn {
+    	width: 32%;
+    	padding: 34px 0;
+    	font-size: 20px;
+	}
+	.title {
+    	font-size: 30px;
+	}
+	.contact input, .contact textarea {
+    	padding: 5px 10px;
+    	font-size: 16px;
+	}
+	.send-btn {
+    	font-size: 14px;
+    	padding: 6px 0;
+	}
+	.mail-to {
+    	font-size: 26px;
+    	padding: 10px 26px;
+	}
+	.about-wrap{
+		order: 1;
+		margin-left: 0;
+		width: 28px;
+	}
+	.about-title-one{
+		font-size: 28px;
+		margin-top: 235px;
+		width: 28px;
+		height: 28px;
+	}
+	.about-title-two{
+		font-size: 16px;
+	}
+	.wrap-one {
+    width: 16px;
+    height: 170px;
+    margin-left: 20px;
+}
+.wrap-two {
+    width: 16px;
+    height: 310px;
+}
+.wrap-one p {
+    margin-top: 68px;
+}
+.about-contact-btn {
+    padding: 8px 22px;
+    font-size: 16px;
+}
+.footer-container h3{
+	font-size: 24px;
+}
 }
