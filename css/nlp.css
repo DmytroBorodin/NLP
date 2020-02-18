@@ -978,7 +978,7 @@ button:hover, a:hover{
 	}
 	.features-container{
 		justify-content: center;
-		margin: 0;
+		margin: auto;
 	}
 	.cards-container{
 		margin:0;
@@ -990,9 +990,7 @@ button:hover, a:hover{
 	.card-img{
 		width: 100%;
 	}
-	.features-container{
-		
-	}
+
 	.features-card{
 		padding: 30px 50px;
 	}
@@ -1262,5 +1260,8 @@ button:hover, a:hover{
 }
 .footer-container h3{
 	font-size: 24px;
+}
+.left-img{
+	width: 150px;
 }
 }
