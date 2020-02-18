@@ -2,8 +2,8 @@ $(document).ready(function(){
   $('.floor-slider').slick({
     infinite: true,
 	dots: true,
-	nextArrow: '<span class="icon-right r-arrow arrow"></span>',
-	prevArrow: '<span class="icon-left l-arrow arrow"></span>',
+	nextArrow: '<span class="icon-icon-left r-arrow arrow"></span>',
+	prevArrow: '<span class="icon-icon-right l-arrow arrow"></span>',
   });
   $('.cards-container').slick({
     infinite: true,
@@ -12,12 +12,11 @@ $(document).ready(function(){
 	slidesToShow: 3,
 	responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 769,
       settings: {
         dots: true,
         slidesToShow: 1,
         dotsClass: "features-dots",
-        centerMode: true
         }
        }
 	 ]
@@ -34,4 +33,8 @@ $(document).ready(function(){
             $('.connected>ul').slideToggle("slow");
              $(this).toggleClass("active");
         });
+    $('.burger').click(function(event){
+		$('.burger, .menu').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
 });
