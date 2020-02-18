@@ -117,20 +117,20 @@ button:hover, a:hover{
 	color: #fff;
 	font-size: 35px;
 	padding: 100px 0;
-	line-height: 1.2;
 }
 .text-container{
 	display: block;
 }
 .main-text{
 	font-family: 'Montserrat Medium';
-	line-height: 44px;
+	line-height: 1.2;
 }
 .bold-text{
 	display: flex;
 	font-family: 'Montserrat Bold';
 	text-transform: uppercase;
-	margin: 64px 0 0 0;
+	margin: 50px 0 0 0;
+	line-height: 1.2;
 }
 .bold-text-p1{
 	margin-left: 30px;
@@ -244,6 +244,7 @@ button:hover, a:hover{
 	text-align: center;
 	color: #fff;
 	transition: all 0.3s ease;
+	padding: 10px 15px;
 }
 .features-card:hover{
 	transform: scale(1.1);
@@ -297,7 +298,7 @@ button:hover, a:hover{
 	color: #fff;
 	background-color: #8c8bb0;
 	text-align: justify;
-	padding: 10px;
+	padding:0 10px;
 }
 .form-wrap{
 	margin-left: 3.62%;
@@ -402,7 +403,6 @@ button:hover, a:hover{
 .pay-block{
 	margin: auto;
 	width: 100%;
-	padding-top: 70px;
 }
 .p-method{
 	text-align: center;
@@ -514,10 +514,10 @@ button:hover, a:hover{
 	background-color: rgba(213, 99, 56, 0.8);
 	color: #fef27f;
 	font-family: 'Arial';
-	font-size: 56px;
+	font-size: 50px;
 	font-weight: bold;
 	border: none;
-	padding: 28px 50px;
+	padding: 20px 40px;
 	margin-bottom: 35px;
 }
 .adrs{
@@ -540,7 +540,7 @@ button:hover, a:hover{
 .about{
 	padding: 100px 0;
 	display: flex;
-	background-color: #FFEF51;
+	background-color: rgba(255, 239, 41, 0.85);
 }
 .about-wrap{
 	display: flex;
@@ -658,7 +658,7 @@ button:hover, a:hover{
 	width: 60.94%;
 }
 .navigation, .contact-us, .connected{
-	margin-left: 8.55%;
+	margin-left: 6%;
 }
 .footer-container h3{
 	display: flex;
@@ -668,9 +668,6 @@ button:hover, a:hover{
 	font-size: 22px;
 	color: #fff;
 	margin-bottom: 22px;
-}
-.footer-container h3 img{
-	display: none;
 }
 .footer-container p{
 	line-height: 36px;
@@ -692,12 +689,16 @@ button:hover, a:hover{
 .call-span{
 	padding-right: 24px;
 }
-.email-span{
+.icon-mail{
 	padding-right: 12px;
+	font-size: 22px;
 }
 /* Footer */
 /* Responsive design */
 @media screen and (max-width: 1600px){
+	.logo{
+		width: 400px;
+	}
 	.donate-btn{
 		padding: 27px 0;
 		width: 8%;
@@ -722,12 +723,16 @@ button:hover, a:hover{
 	.features-title{
 		font-size: 44px;
 	}
-	.footer-container{
-		justify-content: space-between;
-	}
+
 	.text-section{
 		font-size: 28px;
 		padding: 50px 0;
+	}
+	.footer-container h3{
+		font-size: 20px;
+	}
+	.footer-container{
+		font-size: 16px;
 	}
 }
 @media screen and (max-width: 1200px){
@@ -1044,6 +1049,7 @@ button:hover, a:hover{
 	.donate-hr-img{
 		display: block;
 		width: 60%;
+		margin: 20px auto 0;
 	}
 	.donate-img{
 		display: none;
@@ -1067,6 +1073,9 @@ button:hover, a:hover{
     	padding: 48px 0;
     	font-size: 34px;
     	margin-bottom: 10px;
+	}
+	.pay-block{
+		display: none;
 	}
 	.sm{
 		display: block;
@@ -1175,9 +1184,14 @@ button:hover, a:hover{
 }
 }
 @media screen and (max-width: 574px){
+	.text-section{
+		top: calc(120vh + 20px);
+	}
+	.header{
+		padding-top: 20px;
+	}
 	body{
-		background-size: 100% 80%;
-		background-position: center top;
+		background-size: cover;
 	}
 	.container{
 		max-width: 100%;
@@ -1263,5 +1277,10 @@ button:hover, a:hover{
 }
 .left-img{
 	width: 150px;
+}
+.nav-list, .adress-block {
+    display: none;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 }
