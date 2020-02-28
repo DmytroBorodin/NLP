@@ -565,7 +565,7 @@ body.lock{
 }
 .icon-img{
 	margin-right: 4.93%;
-	width: 15%;
+	width: 80%;
 }
 /* Contact */
 /* About */
@@ -1546,9 +1546,6 @@ body.lock{
 	.send__btn{
 		font-size: 12px;
 	}
-	.mail__block .icon-img{
-		width: 22%;
-	}
 	.icon-block{
 		justify-content: space-between;
 	}
@@ -1564,6 +1561,10 @@ body.lock{
 	}
 	.mail__block .adrs{
 		display: none;
+	}
+	.icon-img{
+		margin-right: 0;
+		width: 80%;
 	}
 }
 
