@@ -33,8 +33,25 @@ $(document).ready(function(){
             $('.connected>ul').slideToggle("slow");
              $(this).toggleClass("active");
         });
-    $('.burger').click(function(event){
+  $('.burger').click(function(event){
 		$('.burger, .menu').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
+  $('.menu__link').click(function(event){
+    $('.burger, .menu').removeClass('active');
+    $('body').removeClass('lock');
+  });
+  $(".popup").click(function(){
+    $('body').toggleClass('lock');
+    $('.overlay').fadeIn();
+    $('.overlay').addClass('disabled');
+  })
+  $(".close-c").click(function(){
+    $('body').removeClass('lock');
+    $('.overlay').fadeOut();
+  })
+  $(".send__btn").click(function(){
+    $('body').removeClass('lock');
+    $('.overlay').fadeOut();
+  })
 });
