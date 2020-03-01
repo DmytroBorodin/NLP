@@ -107,6 +107,7 @@ body.lock{
 	border-bottom: 2px solid #fff;
 }
 .menu-container{
+	width: 80%;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -225,6 +226,9 @@ body.lock{
 	left: 0;
 	transform: translateY(-50%);
 }
+.slick-slide{
+	padding: 10px;
+}
 .slick-slide:focus, .slick-initialized:focus, .slick-dotted:focus{
 	outline: none;
 }
@@ -251,6 +255,7 @@ body.lock{
 /* Floor-section */
 /* Features */
 .features{
+	position: relative;
 	width: 100%;
 	padding: 70px 0;
 	background-color: rgba(254, 102, 0, 0.7);	
@@ -261,45 +266,45 @@ body.lock{
 	border: 15px solid #ffcaa6;
 	box-sizing: border-box;
 	font-size: 100px;
+	width: 80%;
+	text-align: center;
 	letter-spacing: 2px;
 	font-family: 'Mont Heavy';
 	padding: 10px 15px;
 }
 .features-container{
+	justify-content: space-between;
 	width: 80.47%;
 	margin-left: 19.53%;
 }
-.cards-container{
-	width: 75.48%;
+.features__card{
+	display: flex;
 	justify-content: space-between;
-	padding: 40px 0;
 }
-.features-card{
-	width: 29.9%;
-	text-transform: uppercase;
-	font-family: 'Montserrat SemiBold';
-	text-align: center;
-	color: #fff;
+.cards__block{
+	width: 70%;
+	margin-top: 30px;
+}
+.features__cards{
+	width: 30%;
 	transition: all 0.3s ease;
-	padding: 10px 15px;
 }
-.features-card:hover{
+.features__cards:hover{
 	transform: scale(1.1);
 }
-.cad-title{
-	margin:20px 0 40px;
+.card__title{
+	text-align: center;
+	font-family: "Montserrat SemiBold";
 	font-size: 26px;
+	margin-bottom: 30px;
+	color: #fff;
 }
-.slick-list, .draggable{
-	padding: 0;
-}
-.card-img{
-	display: block;
-	width: 95%;
-	border-radius: 12px;
+.card__img{
+	width: 100%;
+	border-radius: 10px;
 }
 .features-logo{
-	margin-top: 75px;
+	margin-top: 70px;
 	width: 20.7%;
 	padding-left: 2.3%; 
 }
@@ -307,6 +312,37 @@ body.lock{
 	width: 100%;
 	display: block;
 }
+
+/*modal*/
+.video__div{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100vh;
+	padding: 50px 0;
+	background-color: rgba(0,0,0,0.5);
+}
+.video__div video{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	width: 60%;
+	height: auto;
+}
+.video-close{
+	position: relative;
+	z-index: 5;
+}
+.video-close .close{
+	position: absolute;
+	right: 20%;
+}
+/*modal*/
 /* Features */
 /* Donate */
 .donate{
@@ -331,8 +367,8 @@ body.lock{
 	font-family: 'Montserrat Medium';
 	font-size: 30px;
 	color: #fff;
-	background-color: #8c8bb0;
-	text-align: justify;
+	background-color: rgba(140, 139, 176, 0.8);
+	text-align: left;
 	padding:0 10px;
 }
 .form-wrap{
@@ -347,18 +383,18 @@ body.lock{
 	width: 6.77%;
 	padding: 24.5px 0;
 	border-radius: 3px;
-	background-color: #2e2b70;
+	background-color: rgba(46, 43, 112, 0.8);
 	border: none;
 	color: #fff;
 	font-family: 'Montserrat Bold';
 	font-size: 22px;
 	line-height: 1;
 	transition: all 0.3s ease;
-	border: 2px solid #2e2b70;
+	border: 2px solid rgba(46, 43, 112, 0.8);
 }
 .donate-btn:hover{
-	color: #2e2b70;
-	background-color: #fff;
+	color: rgba(46, 43, 112, 0.8);;
+	background-color: rgba(255, 255, 255, 0.8);
 }
 .other-btn{
 	padding-left: 45px;
@@ -582,6 +618,7 @@ body.lock{
 }
 .about__wrap{
 	display: flex;
+	align-items: flex-start;
 }
 .about-wrap{
 	display: flex;
@@ -718,19 +755,27 @@ body.lock{
 	transform: translate(-50%, -50%);
 	padding: 40px 40px;
 	box-sizing: border-box;
-	width: 80%;
+	width: 90%;
 	margin: auto;
-	background-image: url(../img/overlay-bg.png);
-	background-size: cover;
-	background-position: center, center;
+	background-color: #FEEC00;
 }
 .nlp{
-	width: 50%;
+	width: 40%;
 	margin:0 0 20px 0;
+}
+.wash{
+	position: absolute;
+	right: 0;
+	transform: translate(-45%, -5%);
+	width: 15%;
+	height: auto;
+}
+.wash-img{
+	width: 100%;
 }
 .contact-wrap__block{
 	box-sizing: border-box;
-	width: 80%;
+	width: 90%;
 	border: 5px solid #2e2b70;
 	padding: 20px 40px;
 	margin: auto;
@@ -757,12 +802,13 @@ body.lock{
 }
 .overlay-wrap input, .overlay-wrap textarea{
 	border: none;
-	background-color: #fef27f;
+	background: transparent;
 	font-family: 'Arial Narrow';
 	font-size: 16px;
 	color: #958e77;
 	padding: 5px 10px;
 	letter-spacing: 1.5px;
+	border: 2px solid #2e2b70;
 	box-sizing: border-box;
 }
 .overlay-wrap textarea{
@@ -775,7 +821,7 @@ body.lock{
 .title-wrap{
 	display: flex;
 	justify-content: space-between;
-	width: 80%;
+	width: 90%;
 	margin: auto;
 	aligne-items: flex-start;
 }
@@ -804,10 +850,14 @@ body.lock{
 	background-color: #fff;
 }
 .mail__block .mail-to{
+	background: transparent;
+	color: #BE2025;
+	font-weight: 600;
 	padding: 0;
 	font-size: 35px;
 	display: flex;
 	padding: 5px 5px;
+	margin-bottom: 0;
 }
 .mail-to img{
 	height: 30px;
@@ -893,11 +943,12 @@ body.lock{
 	line-height: 1.5;
 }
 .adrs-icon{
-	padding: 8px 8px 0 0;
+	margin: 8px 8px 0 0;
 }
 .e-icon{
 	width: 26px;
 	border-radius: 2px;
+	border: 1px solid #fff;
 }
 .call-span{
 	padding-right: 24px;
@@ -931,6 +982,9 @@ body.lock{
 		padding-right: 25px;
 		width: auto;
 	}
+	.wash{
+		transform: translate(-50%, -4%);
+	}
 	.wrap-one{
 		width: 32px;
 		height: 170px;
@@ -945,6 +999,17 @@ body.lock{
 	}
 	.footer-container{
 		font-size: 16px;
+	}
+	.video-close{
+		top; 7%;
+	}
+}
+@media screen and (max-width: 1368px){
+	.wash{
+		transform: translate(-52%, -3%);
+	}
+	.video-close{
+		top: 14%;
 	}
 }
 @media screen and (max-width: 1200px){
@@ -967,7 +1032,10 @@ body.lock{
 		font-size: 20px;
 	}
 	.features-title{
-		font-size: 80px;
+		font-size: 65px;
+	}
+	.card__title{
+		font-size: 22px;
 	}
 	.text-block{
 		font-size: 22px;
@@ -1046,11 +1114,20 @@ body.lock{
 	border: none;
 	transition: all 0.3s ease;
 	}
+	.wash{
+		transform: translate(-54%, -2%);
+	}
+	.video-close{
+		top: 18%;
+	}
 }
 @media screen and (max-width: 992px){
 	body{
 		background-size: 100% 110%;
 		background-position: center top;
+	}
+	.card__title {
+    	font-size: 18px;
 	}
 	.container{
 		max-width: 700px;
@@ -1086,7 +1163,7 @@ body.lock{
 		font-size: 60px;
 	}
 	.features-title{
-		font-size: 70px;
+		font-size: 50px;
 		border: 10px solid #ffcaa6;
 	}
 	.cad-title{
@@ -1158,6 +1235,12 @@ body.lock{
 		font-size: 25px;
 		padding: 5px 5px;
 	}
+	.wash{
+		transform: translate(-60%, -1%);
+	}
+	.video-close{
+		top: 23%;
+	}
 }
 @media screen and (max-width: 768px){
 	body{
@@ -1196,20 +1279,11 @@ body.lock{
 	.features-wrap{
 		display: block;
 	}
-	.features-block{
-		margin-top: 0;
-		width: 25%;
-		height: auto;
-		box-sizing: border-box;
-		text-align: center;
-		margin-bottom: 25px;
-		margin-left: 7.86%;
+	.card__title{
+		font-size: 18px;
 	}
 	.features-title{
-		transform:rotate(0);
-		margin-top:0;
-		line-height: 30px;
-		margin-left: 0;
+		font-size: 40px;
 	}
 	.features{
 		padding: 50px 0;
@@ -1247,9 +1321,6 @@ body.lock{
 	.slick-dots li button{
 		width: 52px;
 		height: 52px;
-	}
-	.features-block{
-		width: 35%;
 	}  
 	.features-dots{
 		position: absolute;
@@ -1281,7 +1352,7 @@ body.lock{
 	}
 	.donate-hr-img{
 		display: block;
-		width: 60%;
+		width: 100%;
 		margin: 20px auto 0;
 	}
 	.donate-img{
@@ -1329,10 +1400,14 @@ body.lock{
 	.idea-img{
 		display: none;
 	}
+	.idea-container{
+		width: 80%;
+	}
 	.idea-img-hr{
 		display: block;
-		width: 48.8%;
-		margin-left: 11.72%;
+		width: 70%;
+		margin-left: 0;
+		margin-bottom: 0;
 	}
 	.about{
 		flex-wrap: wrap;
@@ -1432,6 +1507,15 @@ body.lock{
 	.mail__block{
 		margin-top: 10px;
 	}
+	.wash{
+		transform: translate(-68%, 3%);
+	}
+	.slick-slide{
+		margin: 0 45px;
+	}
+	.video-close{
+		top: 29%;
+	}
 }
 @media screen and (max-width: 574px){
 	.text-section{
@@ -1467,7 +1551,8 @@ body.lock{
 		border: 5px solid #ffcaa6;
 	}  
 	.features-title{
-		font-size: 18px;
+		font-size: 30px;
+		width: 100%;
 	}
 	.text-block {
     	font-size: 18px;
@@ -1513,7 +1598,7 @@ body.lock{
 }
 .wrap-two {
     width: 16px;
-    height: 310px;
+    height: 210px;
 }
 .wrap-one p {
     margin-top: 68px;
@@ -1566,5 +1651,26 @@ body.lock{
 		margin-right: 0;
 		width: 80%;
 	}
+	.wash{
+		transform: translate(-40%, 12%);
+	}
+	.slick-slide{
+		margin: 0 38px;
+	}
+	.video-close{
+		top: 35%;
+	}
 }
-
+@media screen and (max-width: 500px){
+	.wash{
+		transform: translate(-40%, 17%);
+	}
+}
+@media screen and (max-width: 400px){
+	.wash{
+		transform: translate(-40%, 23%);
+	}
+	.video-close{
+		top: 39%;
+	}
+}
