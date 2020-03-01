@@ -5,7 +5,7 @@ $(document).ready(function(){
 	nextArrow: '<span class="icon-icon-left r-arrow arrow"></span>',
 	prevArrow: '<span class="icon-icon-right l-arrow arrow"></span>',
   });
-  $('.cards-container').slick({
+  $('.cards__block').slick({
     infinite: true,
 	dots: false,
 	arrows: false,
@@ -53,5 +53,23 @@ $(document).ready(function(){
   $(".send__btn").click(function(){
     $('body').removeClass('lock');
     $('.overlay').fadeOut();
+  })
+  $(".studio").click(function(){
+    $('body').toggleClass('lock');
+    $('.first-vid').fadeIn();
+    $('.first-vid').addClass('disabled');
+  })
+  $(".video-close").click(function(){
+    $('body').removeClass('lock');
+    $('.first-vid').fadeOut();
+  })
+  $(".incubator").click(function(){
+    $('body').toggleClass('lock');
+    $('.second-vid').fadeIn();
+    $('.second-vid').addClass('disabled');
+  })
+  $(".video-close").click(function(){
+    $('body').removeClass('lock');
+    $('.second-vid').fadeOut();
   })
 });
