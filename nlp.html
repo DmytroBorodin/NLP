@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/slick.css">
 		<link rel="stylesheet" href="css/icons.css">
 		<link rel="stylesheet" href="css/nlp.css">
-		<title>NLP</title>
+		<title>NPL</title>
 	</head>
 	<body>
 		<header class="header">
@@ -56,27 +56,43 @@
 			</div>
 		</section>
 		<section class="features" id="features">
-				<div class="container features-block">
-					<h1 class="features-title">Features</h1>
+				<div class="container">
+					<h3 class="features-title">Features</h3>
 				</div>
 				<div class="container features-container">
-					<div class="container cards-container">
-						<div class="features-card">
-							<h3 class="cad-title">Studios</h3>
-							<img src="img/studios.png" alt="" class="card-img">
+					<div class="cards__block">
+						<div class="features__cards studio">
+							<h4 class="card__title">STUDIO</h4>
+							<img src="img/studios.png" alt="" class="card__img">
 						</div>
-						<div class="features-card">
-							<h3 class="cad-title">Incubator</h3>
-							<img src="img/incubator.png" alt="" class="card-img">
+						<div class="features__cards incubator">
+							<h4 class="card__title">INCUBATOR</h4>
+							<img src="img/incubator.png" alt="" class="card__img">
 						</div>
-						<div class="features-card">
-							<h3 class="cad-title">Art</h3>
-							<img src="img/museum.png" alt="" class="card-img">
+						<div class="features__cards">
+							<h4 class="card__title">ART</h4>
+							<img src="img/museum.png" alt="" class="card__img">
 						</div>
 					</div>
-					<div class="features-logo">
+					<div class="features-logo">	
 						<img src="img/logo1.png" alt="">
 					</div>
+				</div>
+				<div class="video__div first-vid hidden">
+					<div class="video-close">
+						<div class="close"></div>
+					</div>
+					<video controls>
+						<source id="first-vid" src="Final Comp_1.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="video__div second-vid hidden">
+					<div class="video-close">
+						<div class="close"></div>
+					</div>
+					<video controls>
+						<source src="Short version modification done (1).mp4" type="video/mp4">
+					</video>
 				</div>
 		</section>
 		<section class="donate" id="donate">
@@ -104,7 +120,7 @@
 					</div>
 		</section>
 		<section class="contact" id="contact">
-				<div class="container"><img src="img/idea-hr.png" alt="" class="idea-img-hr"></div>
+				<div class="container idea-container"><img src="img/idea-hr.png" alt="" class="idea-img-hr"></div>
 				<div class="contact-block">
 					<h3 class="title">Contact</h3>
 					<div class="container fr-input">
@@ -157,6 +173,9 @@
 					<div class="overlay-wrap">
 						<div class="title-wrap">
 							<img src="img/contact-logo.png" alt="" class="nlp">
+							<div class="wash">
+								<img src="img/wach.png" alt="" class="wash-img">
+							</div>
 							<div class="close-c">
 								<div class="close"></div>
 							</div>
@@ -182,8 +201,9 @@
 									<p class="adrs">2803 B Philadelphia Pike #112</p>
 									<p class="adrs">Claymont DE 19703</p>
 									<div class="icon-block">
-										<a href=""><img src="img/facebook.png" alt="" class="icon-img"></a>
+										<a href=""class="icon-block__link"><img src="img/facebook.png" alt="" class="icon-img"></a>
 										<a href=""><img src="img/youtube.png" alt="" class="icon-img"></a>
+										<a href=""><img src="img/viber-icon.png" alt="" class="icon-img"></a>
 										<a href=""><img src="img/pinterest.png" alt="" class="icon-img"></a>
 										<a href=""><img src="img/twitter.png" alt="" class="icon-img"></a>
 									</div>
@@ -238,8 +258,19 @@
 	</footer>
 	<!-- Scripts -->
 	<script src="js/jquery-3.4.1.min.js"></script>
+	<script>
+		   var vid = document.getElementById("first-vid"); 
+
+  function playVid() { 
+    vid.play(); 
+  } 
+
+  function pauseVid() { 
+    vid.pause(); 
+  } 
+	</script>
 	<script src="js/slick.min.js"></script>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	
 	<script src="js/nlp.js"></script>
 </body>
 </html>
