@@ -326,7 +326,7 @@ body.lock{
 	padding: 50px 0;
 	background-color: rgba(0,0,0,0.5);
 }
-.video__div video{
+.video-wrap{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -334,13 +334,18 @@ body.lock{
 	width: 60%;
 	height: auto;
 }
+.video__div video{
+	width: 100%;
+}
 .video-close{
 	position: relative;
 	z-index: 5;
 }
 .video-close .close{
 	position: absolute;
-	right: 20%;
+	right: 0%;
+	top:0;
+	transform: translate(100%, -100%);
 }
 /*modal*/
 /* Features */
@@ -1000,17 +1005,13 @@ body.lock{
 	.footer-container{
 		font-size: 16px;
 	}
-	.video-close{
-		top; 7%;
-	}
+
 }
 @media screen and (max-width: 1368px){
 	.wash{
 		transform: translate(-52%, -3%);
 	}
-	.video-close{
-		top: 14%;
-	}
+	
 }
 @media screen and (max-width: 1200px){
 	.container{
@@ -1117,9 +1118,7 @@ body.lock{
 	.wash{
 		transform: translate(-54%, -2%);
 	}
-	.video-close{
-		top: 18%;
-	}
+	
 }
 @media screen and (max-width: 992px){
 	body{
@@ -1238,13 +1237,11 @@ body.lock{
 	.wash{
 		transform: translate(-60%, -1%);
 	}
-	.video-close{
-		top: 23%;
-	}
+	
 }
 @media screen and (max-width: 768px){
 	body{
-		background-size: 100% 100%;
+		background-size: cover;
 		background-position: center top;
 	}
 	.header{
@@ -1513,8 +1510,8 @@ body.lock{
 	.slick-slide{
 		margin: 0 45px;
 	}
-	.video-close{
-		top: 29%;
+	.contact-wrap__block{
+		border: 3px solid #2e2b70;
 	}
 }
 @media screen and (max-width: 574px){
@@ -1657,8 +1654,8 @@ body.lock{
 	.slick-slide{
 		margin: 0 38px;
 	}
-	.video-close{
-		top: 35%;
+	.contact-wrap__block{
+		border: 2px solid #2e2b70;
 	}
 }
 @media screen and (max-width: 500px){
@@ -1670,7 +1667,5 @@ body.lock{
 	.wash{
 		transform: translate(-40%, 23%);
 	}
-	.video-close{
-		top: 39%;
-	}
+
 }
