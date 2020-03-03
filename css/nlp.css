@@ -1523,7 +1523,8 @@ body.lock{
 	}
 	body{
 		background-image: url("../img/body-min.png");
-		bg-size: cover;
+		background-size: cover;
+		background-position: center top;
 	}
 	.container{
 		max-width: 100%;
