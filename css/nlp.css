@@ -1522,10 +1522,8 @@ body.lock{
 		padding-top: 20px;
 	}
 	body{
-		-webkit-background-size: 120% 110%;
-  		-moz-background-size: 120% 110%;
-  		-o-background-size: 120% 110%;
-  		background-size: 120% 110%;
+		background-image: url("../img/body-min.png");
+		bg-size: cover;
 	}
 	.container{
 		max-width: 100%;
