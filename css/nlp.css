@@ -1524,6 +1524,7 @@ body.lock{
 	body{
 		background-image: url("../img/body-min.png");
 		background-position: center top;
+		background-size: none;
 	}
 	.container{
 		max-width: 100%;
