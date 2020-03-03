@@ -1522,7 +1522,10 @@ body.lock{
 		padding-top: 20px;
 	}
 	body{
-		background-size: cover;
+		-webkit-background-size: 120% 110%;
+  		-moz-background-size: 120% 110%;
+  		-o-background-size: 120% 110%;
+  		background-size: 120% 110%;
 	}
 	.container{
 		max-width: 100%;
@@ -1534,7 +1537,7 @@ body.lock{
 		font-size: 14px;
 	}
 	.main-text{
-		line-height: 28px;
+		line-height: 1.2;
 	}
 	.slick-dots li button{
 		width: 30px;
