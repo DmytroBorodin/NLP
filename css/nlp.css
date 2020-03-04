@@ -40,7 +40,7 @@
 	line-height: 1;
 }
 html{
-	background-image: url('../img/header-bg.png');
+	background-image: url('../img/header-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: 0 0.1vh;
 	background-attachment: fixed;
@@ -54,6 +54,7 @@ html{
 body{
 	height:100%;
   	overflow: auto;
+  	font-display: swap;
 }
 a{
 	text-decoration: none;
@@ -507,7 +508,7 @@ body.lock{
 /* Contact */
 .contact{
 	padding: 72px 0;
-	background-image: url('../img/contact-bg.png');
+	background-image: url('../img/contact-bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -907,7 +908,7 @@ body.lock{
 /* About */
 /* Footer */
 .footer{
-	background-image: url(../img/footer-bg.png);
+	background-image: url(../img/footer-bg.jpg);
 	background-size: cover!important;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1561,7 +1562,7 @@ body.lock{
 		border: 5px solid #ffcaa6;
 	}  
 	.features-title{
-		font-size: 30px;
+		font-size: 28px;
 		width: 100%;
 	}
 	.text-block {
