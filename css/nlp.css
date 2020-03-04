@@ -48,14 +48,12 @@ html{
   	-moz-background-size: 100% 113%;
   	-o-background-size: 100% 113%;
   	background-size: 100% 113%;
+  	overflow: hidden;
 }
-/*body{
-	background-image: url('../img/header-bg.png');
-	background-size: 100% 113%;
-	background-repeat: no-repeat;
-	background-position: 0 0.1vh;
-	background-attachment: fixed;
-}*/
+body{
+	height:100%;
+  	overflow: auto;
+}
 a{
 	text-decoration: none;
 }
