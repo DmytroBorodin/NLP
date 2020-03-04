@@ -39,13 +39,23 @@
 	margin: 0;
 	line-height: 1;
 }
-body{
+html{
+	background-image: url('../img/header-bg.png');
+	background-repeat: no-repeat;
+	background-position: 0 0.1vh;
+	background-attachment: fixed;
+	-webkit-background-size: 100% 113%;
+  	-moz-background-size: 100% 113%;
+  	-o-background-size: 100% 113%;
+  	background-size: 100% 113%;
+}
+/*body{
 	background-image: url('../img/header-bg.png');
 	background-size: 100% 113%;
 	background-repeat: no-repeat;
 	background-position: 0 0.1vh;
 	background-attachment: fixed;
-}
+}*/
 a{
 	text-decoration: none;
 }
@@ -1521,8 +1531,7 @@ body.lock{
 	.header{
 		padding-top: 20px;
 	}
-	body{
-		background-image: url("../img/body-min.png");
+	html{
 		background-position: center top;
 		background-size: 150% 100vh;
 	}
