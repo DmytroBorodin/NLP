@@ -49,6 +49,7 @@ html{
   	-o-background-size: 100% 113%;
   	background-size: 100% 113%;
   	overflow: hidden;
+  	height: 100%;
 }
 body{
 	height:100%;
