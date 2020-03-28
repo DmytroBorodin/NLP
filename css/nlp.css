@@ -84,7 +84,7 @@ body.lock{
 .header{
 	position: relative;
 	padding-top: 100px;
-	height: 150vh;
+	height: 100vh;
 	background: transparent;
 }
 .menu{
@@ -170,9 +170,7 @@ body.lock{
 /* Header */
 /* Text-section */
 .text-section{
-	position: absolute;
-	top: calc(150vh + 100px);
-	transform: translateY(-100%);
+	
 	width: 100%;
 	background-color: rgba(138, 182, 242, 0.75);
 	color: #fff;
@@ -239,7 +237,7 @@ body.lock{
 }
 @media screen and (max-width: 1368px){
 	.wrap__img img{
-		width: 700px;
+		max-width: 700px;
 	}
 }
 @media screen and (max-width: 1200px){
@@ -268,18 +266,43 @@ body.lock{
 }
 @media screen and (max-width: 578px){
 	.wrap__img img{
-		width: 300px;
+		width: 290px;
 	}
 	.floor-section{
 		height: 60vh;
 	}
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 550px){
 	.wrap__img img{
-		width: 210px;
+		width: 270px;
+	}
+}
+@media screen and (max-width: 500px){
+	.wrap__img img{
+		width: 250px;
 	}
 	.floor-section{
 		height: 50vh;
+	}
+}
+@media screen and (max-width: 450px){
+	.wrap__img img{
+		width: 220px;
+	}
+}
+@media screen and (max-width: 400px){
+	.wrap__img img{
+		width: 200px;
+	}
+}
+@media screen and (max-width: 370px){
+	.wrap__img img{
+		width: 180px;
+	}
+}
+@media screen and (max-width: 340px){
+	.wrap__img img{
+		width: 165px;
 	}
 }
 /* Floor-section */
@@ -318,9 +341,13 @@ body.lock{
 .features__cards{
 	width: 30%;
 	transition: all 0.3s ease;
+	padding: 20px;
 }
 .features__cards:hover{
 	transform: scale(1.1);
+}
+.cards__block .slick-slide:focus{
+	outline: none;
 }
 .card__title{
 	text-align: center;
