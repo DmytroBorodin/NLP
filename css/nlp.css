@@ -225,6 +225,7 @@ body.lock{
 .wrap__img:hover{
 	width: 100%;
 	transition:all 1s ease;
+	transform: scale(1.05);
 }
 @media screen and (max-width: 1600px){
 	.wrap__img img{
