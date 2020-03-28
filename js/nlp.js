@@ -1,10 +1,5 @@
 $(document).ready(function(){
-  $('.floor-slider').slick({
-    infinite: true,
-	dots: true,
-	nextArrow: '<span class="icon-icon-left r-arrow arrow"></span>',
-	prevArrow: '<span class="icon-icon-right l-arrow arrow"></span>',
-  });
+ 
   $('.cards__block').slick({
     infinite: true,
 	dots: false,
