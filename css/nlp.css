@@ -229,38 +229,90 @@ body.lock{
 	transition:all 1s ease;
 	transform: scale(1.05);
 }
-.wrap__img:hover .floor__text{
-	left: 50%;
-	transform: translate(-50%, -50%);
+.wrap__img:hover .floor__text__title{
 	transition: all 1.2s ease;
-	top: 50%;
+	top: 2%;
+	left: 0%;
 }
-.floor__text {
-	background-color: rgba(255, 255, 255, 0.7);
+.floor__text__title {
+	color: rgba(254, 102, 0, 1);
+	transition: all 1.2s ease;
 
-	position: absolute;
-	top: -50%;
-	left: -180%;
-	transition: all 1.2s ease;
-	width: 70%;
-}
-.fool__text__title {
 	line-height: 1.5;
 	font-size: 30px;
-	width: 100%;
+	font-family: 'Montserrat Bold';
 }
 .floor__list__item {
 	line-height: 1.5;
 	font-size: 26px;
+	color: rgba(254, 102, 0, 1);
+}
+.floor__text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: 45%;
+}
+.floor__text__1{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.wrap__img:hover .floor__text__1{
+	background: rgba(255,255,255,0.7);
+	transition: all 1.2s ease;
+}
+.floor__text__title, .floor__list__item{
+	position: absolute;
+	top: -150%;
+	left: -150%;
 }
 .floor__list__item:before{
 	content: '-';
+}
+.floor__list__item:nth-child(2){
+	transition: all 2.2s ease;
+}
+.floor__list__item:nth-child(3){
+	transition: all 3.2s ease;
+}
+.floor__list__item:nth-child(4){
+	transition: all 4.2s ease;
+}
+.wrap__img:hover .floor__list__item{
+	left: 0;
+}
+.first__floor:hover .floor__list__item:nth-child(2){
+	transition: all 2.2s ease;
+	top: 25%;
+}
+.first__floor:hover .floor__list__item:nth-child(3){
+	transition: all 3.2s ease;
+	top: 45%;
+}
+.first__floor:hover .floor__list__item:nth-child(4){
+	transition: all 4.2s ease;
+	top: 65%;
+}
+.second__floor:hover .floor__list__item:nth-child(2){
+	transition: all 2.2s ease;
+	top: 25%;
+}
+.second__floor:hover .floor__list__item:nth-child(3){
+	transition: all 3.2s ease;
+	top: 60%;
+}
+.second__floor:hover .floor__list__item:nth-child(4){
+	transition: all 4.2s ease;
+	top: 85%;
 }
 @media screen and (max-width: 1600px){
 	.wrap__img img{
 		width: 830px;
 	}
-	.fool__text__title {
+	.floor__text__title {
 		font-size: 26px;
 	}
 	.floor__list__item {
@@ -271,7 +323,7 @@ body.lock{
 	.wrap__img img{
 		width: 730px;
 	}
-	.fool__text__title {
+	.floor__text__title {
 		font-size: 22px;
 	}
 	.floor__list__item {
@@ -290,7 +342,7 @@ body.lock{
 	.floor-section{
 		height: 90vh;
 	}
-	.fool__text__title {
+	.floor__text__title {
 		font-size: 20px;
 	}
 	.floor__list__item {
@@ -313,7 +365,7 @@ body.lock{
 	.floor-section{
 		height: 70vh;
 	}
-	.fool__text__title {
+	.floor__text__title {
 		font-size: 14px;
 	}
 	.floor__list__item {
@@ -329,6 +381,9 @@ body.lock{
 	.wrap__img img{
 		width: 340px;
 	}
+	.floor__text{
+		height: 60%;
+	}
 }
 @media screen and (max-width: 578px){
 	.wrap__img img{
@@ -337,11 +392,11 @@ body.lock{
 	.floor-section{
 		height: 60vh;
 	}
-	.fool__text__title {
+	.floor__text__title {
 		font-size: 10px;
 	}
 	.floor__list__item {
-		font-size: 8px;
+		font-size: 7px;
 	}
 }
 @media screen and (max-width: 550px){
@@ -361,6 +416,10 @@ body.lock{
 	.wrap__img img{
 		width: 215px;
 	}
+	.floor__text{
+		height: 70%;
+		width: 80%;
+	}
 }
 @media screen and (max-width: 400px){
 	.wrap__img img{
@@ -372,9 +431,12 @@ body.lock{
 		width: 180px;
 	}
 }
-@media screen and (max-width: 340px){
+@media screen and (max-width: 357px){
 	.wrap__img img{
 		width: 165px;
+	}
+	.third__floor:hover .floor__list__item:nth-child(3){
+		top: 55%;
 	}
 }
 /* Floor-section */
