@@ -211,12 +211,15 @@ body.lock{
 	max-width: 93%;
 	margin: auto;
 	justify-content: center;
+	font-family: 'Montserrat Medium';
 }
 .wrap__img{
 	width: 25%;
 	overflow: hidden;
 	cursor: pointer;
 	transition: all 1.5s ease;
+
+	position: relative;
 }
 .wrap__img img{
 	width: 980px;
@@ -226,14 +229,53 @@ body.lock{
 	transition:all 1s ease;
 	transform: scale(1.05);
 }
+.wrap__img:hover .floor__text{
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 1.2s ease;
+	top: 50%;
+}
+.floor__text {
+	background-color: rgba(255, 255, 255, 0.7);
+
+	position: absolute;
+	top: -50%;
+	left: -180%;
+	transition: all 1.2s ease;
+	width: 70%;
+}
+.fool__text__title {
+	line-height: 1.5;
+	font-size: 30px;
+	width: 100%;
+}
+.floor__list__item {
+	line-height: 1.5;
+	font-size: 26px;
+}
+.floor__list__item:before{
+	content: '-';
+}
 @media screen and (max-width: 1600px){
 	.wrap__img img{
 		width: 830px;
+	}
+	.fool__text__title {
+		font-size: 26px;
+	}
+	.floor__list__item {
+		font-size: 22px;
 	}
 }
 @media screen and (max-width: 1440px){
 	.wrap__img img{
 		width: 730px;
+	}
+	.fool__text__title {
+		font-size: 22px;
+	}
+	.floor__list__item {
+		font-size: 18px;
 	}
 }
 @media screen and (max-width: 1368px){
@@ -248,6 +290,13 @@ body.lock{
 	.floor-section{
 		height: 90vh;
 	}
+	.fool__text__title {
+		font-size: 20px;
+	}
+	.floor__list__item {
+		font-size: 16px;
+	}
+}
 }
 @media screen and (max-width: 998px){
 	.wrap__img img{
@@ -263,6 +312,12 @@ body.lock{
 	}
 	.floor-section{
 		height: 70vh;
+	}
+	.fool__text__title {
+		font-size: 14px;
+	}
+	.floor__list__item {
+		font-size: 12px;
 	}
 }
 @media screen and (max-width: 700px){
@@ -281,6 +336,12 @@ body.lock{
 	}
 	.floor-section{
 		height: 60vh;
+	}
+	.fool__text__title {
+		font-size: 10px;
+	}
+	.floor__list__item {
+		font-size: 8px;
 	}
 }
 @media screen and (max-width: 550px){
