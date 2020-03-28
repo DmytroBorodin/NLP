@@ -287,12 +287,12 @@ body.lock{
 }
 @media screen and (max-width: 450px){
 	.wrap__img img{
-		width: 220px;
+		width: 215px;
 	}
 }
 @media screen and (max-width: 400px){
 	.wrap__img img{
-		width: 200px;
+		width: 195px;
 	}
 }
 @media screen and (max-width: 370px){
